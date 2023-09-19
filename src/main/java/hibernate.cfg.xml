@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:data</property>
+        <property name="hibernate.connection.username">system</property>
+         <property name="hibernate.connection.password">21012003@</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle12cDialect</property>
+        <property name="connection.pool_size">2</property>
+		<!--property name="dialect">org.hibernate.dialect.MySQLDialect</property -->
+		<property name="current_session_context_class">thread</property>
+		<property name="show_sql">true</property>
+		<mapping class="entity.SanPham"/>
+		<mapping class="entity.KhachHang"/>
+		<mapping class="entity.LoaiSanPham"/>
+		<mapping class="entity.NhanHieu"/>
+		<mapping class="entity.QuanTri"/>
+		<mapping class="entity.HoaDon"/>
+		<mapping class="entity.HoaDonChiTiet"/>
+		<mapping class="entity.Menus"/>
+		<mapping class="entity.Color"/>
+		<mapping class="entity.Users"/>
+		
+	
+    </session-factory>
+</hibernate-configuration>
